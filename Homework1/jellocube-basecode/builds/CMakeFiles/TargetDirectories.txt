@@ -1,3 +1,0 @@
-C:/Users/RaviKiran/Downloads/IDS6938-SimulationTechniques-master (5)/IDS6938-SimulationTechniques-master/Homework1/jellocube-basecode/builds/CMakeFiles/jello.dir
-C:/Users/RaviKiran/Downloads/IDS6938-SimulationTechniques-master (5)/IDS6938-SimulationTechniques-master/Homework1/jellocube-basecode/builds/CMakeFiles/ALL_BUILD.dir
-C:/Users/RaviKiran/Downloads/IDS6938-SimulationTechniques-master (5)/IDS6938-SimulationTechniques-master/Homework1/jellocube-basecode/builds/CMakeFiles/ZERO_CHECK.dir

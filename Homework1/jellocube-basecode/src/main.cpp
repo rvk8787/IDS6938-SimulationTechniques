@@ -14,8 +14,10 @@
 #define MHEIGHT 720
 
 JelloMesh theJello;
+JelloMesh theJello1;
+
 Camera theCamera;
-World theWorld("../worlds/ground.xml");
+World theWorld("../worlds/cylinders.xml");
 mmc::FpsTracker theFpsTracker;
 
 // UI Helpers
