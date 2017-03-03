@@ -11,7 +11,7 @@ The assignment is due: Monday, February 27 at 11:59PM (EST)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-I Would like to take one of the late days to submit the completed Readme file and the final report. I have a partially working jello cube simulation and uploaded it.
+I Would like to take two of the late days to submit the completed Readme file and the final report. I have a partially working jello cube simulation and uploaded it.
 
 Completed Parts
 -> Part 1
