@@ -119,7 +119,7 @@ F= -Kx, where k is the spring constant and x is the spring displacement.
 In this case spring force has 2 components, Elasticity given by Ks and Damping given by Kd. 
 The elasticity on between 2 particles is calculated using the formula : 
 
-![](images/SpringForce_Elasticity.PNG?raw=true)
+![](images/Spring Force_Elasticity.PNG?raw=true)
  
 The damping force between 2 particles is calculated using the formula:
 
@@ -164,15 +164,15 @@ I added shear and bend springs to the existing jello mesh. Structural springs we
 
 	o	Structural Springs
 	
-	![](images/grnd1.PNG?raw=true)
+![](images/grnd1.PNG?raw=true)
 	
 	o	Shear Springs
  	
-	![](images/Shear.PNG?raw=true)
+![](images/Shear.PNG?raw=true)
 	
 	o	Bend Springs
  	
-	![](images/Bend.PNG?raw=true)
+![](images/Bend.PNG?raw=true)
 	
 •	Extra Features
 	o	Video
