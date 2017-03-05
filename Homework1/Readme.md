@@ -11,7 +11,7 @@ Instructor: Dr. Joseph Kider
 Assignment 1
 The Jello Cube (Continuous Simulation Assignment)
 
-
+![](images/undeformed3.png?raw=true)
 
 
 
@@ -29,7 +29,8 @@ NID: ra977917
 
 Part 1: Numerical Analysis of Integration Function
 Given the following IVP:
- 
+![](images/IVP.png?raw=true)
+
 With initial conditions y(0)=0
 
 (a)	Solving for the exact solution: 
@@ -41,6 +42,7 @@ Solving the above IVP by taking integral to get exact function gives
 
 •	df function defines the original IVP given above and exact function defines the solution of the IVP given y(0)=0.
 
+![](images/b_df_Exact.png?raw=true)
  
 (c)	Running Simulation with RK1, RK2, RK4
 
