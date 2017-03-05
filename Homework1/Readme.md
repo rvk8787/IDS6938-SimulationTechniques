@@ -176,7 +176,8 @@ I added shear and bend springs to the existing jello mesh. Structural springs we
 	
 •	Extra Features
 	o	Video
-	Link to the Video uploaded on Youtube is as follows:
+	Link to the Video uploaded on Youtube is as follows: https://youtu.be/JikRj2p7xqE
+	
 
 Part 3: Written Questions
 
