@@ -181,20 +181,25 @@ I added shear and bend springs to the existing jello mesh. Structural springs we
 Part 3: Written Questions
 
 1.	Effect of Ks and Kd on the Jello
+
 The coefficient of elasticity Ks dictates the stiffness of the springs in the jello cube. The Ks is directly proportional to the stiffness Increasing the Ks, increases the stiffness and prevents increased displacement of the springs in the mesh on collision and impact. 
 
 The damping coefficient  Kd is a dynamic spring constant and is responsible for damping or reducing the oscillations of the spring in the jello. Increase in Kd will damp the oscillations faster and vice versa.
 
 2.	Benefits and Drawbacks of Collision System
+
 The collision system tries to simulate impact and collision of jello with other objects using a mass- spring system to give a realistic solution. However, there are circumstances where the jello exhibits unusual behavior such as bounciness, wobbling and splattering on impact with objects or the ground. These problems could be solved with finetuning and tweaking of the various spring constants for the different springs employed in the system. The benefits of this collision system may be the principle of the mass spring equations employed which may have many other applications such as designing bullet-impact simulations, Ocean wave simulations for designing wave energy harvesting systems, simulating suspension bridges to determine stresses etc.
 
 3.	Example of Mass- Spring Simulations
+
 As mentioned above, a few examples of mass spring simulations would be simulating bullet impact on different materials for design of bullet proof vests or assessing damage potential of a bullet or a missile. It could be used to simulate wave energy in the ocean to help design wave energy harvesting devices. Another example of Mass-spring simulations could be the determining stresses in suspension bridges.
 
 4.	Realistic Behavior? Integration method
+
 The jello explodes easily on collision and impact with objects and the ground. How ever the jello mesh has shown partially realistic effects while testing with different spring parameters with the RK4 integration method. Though the Euler and the midpoint method simulate the jello, the jello cube explodes inevitably.A more realistic behavior may be possible if the grid size is increased to have more particles and compute forces more accurately upon impact and collision.
 
 5.	Simulate Water
+
 The same mass- spring collision system could be used to simulate water or at least  the wavy nature of water and splashes. Though computationally expensive, with higher spring coefficients Ks and Kd and a large number of water particle droplets a realistic simulation of water behavior may be achieved. The efficiency of this system would depend on the Particle size, number, physics involved in particle dispersion, forces and ingression in to surrounding objects. 
 
 
