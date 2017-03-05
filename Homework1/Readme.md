@@ -8,11 +8,8 @@ Instructor: Dr. Joseph Kider
 
 
 
-
-
 Assignment 1
 The Jello Cube (Continuous Simulation Assignment)
-
 
 
 
@@ -25,6 +22,11 @@ Submitted by
 Kattoju Ravi Kiran
 NID: ra977917
  
+
+
+
+
+
 Part 1: Numerical Analysis of Integration Function
 Given the following IVP:
  
@@ -65,18 +67,18 @@ d.	Most accurate method
 From the results, the most accurate integration method seems to be the RK4 method. This may be due to the fact that it computes and takes in to account  RK1, RK2 and RK4 values in to consideration while calculating the value of y. The RK4 method produced results in close proximity to the exact y values. The error % with different step sizes and increasing values of ‘x’ provided better accuracy compared to the other 2 integration methods.
 Part 2: Programming Jello Cube
 •	Integration Methods
-o	Euler Integration
+	o	Euler Integration
 The JelloMesh::EulerIntegrate() function is called when the integration type is set to Euler Integration. This function obtains the ‘dt’ function, particle grid information and computes the position and velocity for each particle in the grid. 
 
-o	Midpoint Integration
+	o	Midpoint Integration
 The JelloMesh::MidpointIntegrate() function is called when the integration type is set to the Midpoint integrate method. This function obtains the ‘dt’ function, the particle grid information and uses it to calculate the forces at the midpoint and then the K1 constants. The position and velocity of each particle are adjusted based on the forces computed.
 
-o	RK4 Integration
+	o	RK4 Integration
 The JelloMesh::RK4Integrate() function is called when the integration type is set to the RK4 integrate method. This function obtains the ‘dt’ function, the particle grid information and uses it to calculate the forces at each stage using K1, K2, and K4 constants. The position and velocity of each particle are adjusted based on the forces computed using K1 at stage 1, K2 at stage 2, K4 at stage. 
 
 
 •	Particle Forces
-o	Compute Forces
+	o	Compute Forces
 The ComputeForces() function computes the external forces on the particles in the jello mesh grid. It also computes the spring force and the damping force between particles given by Hooke’s Law. 
 Spring Force equation:
 F= -Kx, where k is the spring constant and x is the spring displacement.
@@ -88,28 +90,28 @@ The damping force between 2 particles is calculated using the formula:
 The total force is then calculated which is the sum of the 2 forces. This force is applied to one particle and an exact counter force is applied to the other particle to balance the forces.
  
 •	Collision and Penetration Detection
-o	Check for collisions
+	o	Check for collisions
 The Check for collisions function checks to see if the jello mesh has collided with the ground or objects in the world. My function has been able to detect contact and collisions both with the ground and the cylinders in the environment.
-o	Floor Intersection
+	o	Floor Intersection
 The floor intersection  function gets the particle , intersection point information and uses it to detect if the jello mesh has made a collision ( entered the threshold region above the ground) or contact with the ground (shown in figure below). I set my threshold to 0.01 above the ground and the collision system detects entry of the Jello mesh in to the collision threshold region and starts computing forces.
   
-o	Cylinder Intersection
+	o	Cylinder Intersection
 The cylinder intersection  function gets the particle , intersection point information and uses it to detect if the jello mesh has made a collision ( entered the threshold region above the ground) or contact with the cylinder (shown in figures below)  . The collision system detects jello mesh collision and contact with the cylinder. How ever, it is failing to compute forces and explodes.
 
 •	Collision and Penetration Response
-o	Resolve Collisions
+	o	Resolve Collisions
 
 The Resolve Collisions function was used to calculate the resolution forces upon collision of the jello mesh particles with the ground threshold region. A penalty force  was calculated using the penalty elastic force constant and the penalty damping force constant and applied to the particles in the direction of their velocity normals.
-o	Resolve Contacts
+	o	Resolve Contacts
 The Resolve Contacts function calculates the particle force that needs to be applied on each particle that has made contact by updating the particle position, velocity and forces subjected on the particles. The particle velocity is given by the equation:
  
 •	Extra springs
 I added shear and bend springs to the existing jello mesh. Structural springs were already present. Bend springs were added between alternate particles on the grid and shear springs were added between diagonal neighbouring particles.
-o	Structural Springs
+	o	Structural Springs
  
-o	Shear Springs
+	o	Shear Springs
  
-o	Bend Springs
+	o	Bend Springs
  
 •	Extra Features
 o	Video
