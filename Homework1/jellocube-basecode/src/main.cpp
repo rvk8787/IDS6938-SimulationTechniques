@@ -17,7 +17,7 @@ JelloMesh theJello;
 JelloMesh theJello1;
 
 Camera theCamera;
-World theWorld("../worlds/cylinders.xml");
+World theWorld("../worlds/ground.xml");
 mmc::FpsTracker theFpsTracker;
 
 // UI Helpers

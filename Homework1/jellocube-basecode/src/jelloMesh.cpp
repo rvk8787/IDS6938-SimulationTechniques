@@ -3,23 +3,23 @@
 #include <algorithm>
 
 // TODO
-double JelloMesh::g_structuralKs = 2000.0; 
-double JelloMesh::g_structuralKd = 7.5; 
-double JelloMesh::g_attachmentKs = 2000.0;
-double JelloMesh::g_attachmentKd = 7.5;
-double JelloMesh::g_shearKs = 2000.0;
-double JelloMesh::g_shearKd = 7.5;
-double JelloMesh::g_bendKs = 2000.0;
-double JelloMesh::g_bendKd = 7.5;
-double JelloMesh::g_penaltyKs = 2000.0;
-double JelloMesh::g_penaltyKd = 7.5;
+double JelloMesh::g_structuralKs = 1000.0; 
+double JelloMesh::g_structuralKd = 5.0; 
+double JelloMesh::g_attachmentKs = 1000.0;
+double JelloMesh::g_attachmentKd = 5.0;
+double JelloMesh::g_shearKs = 1000.0;
+double JelloMesh::g_shearKd = 5.0;
+double JelloMesh::g_bendKs = 1000.0;
+double JelloMesh::g_bendKd = 5.0;
+double JelloMesh::g_penaltyKs = 1000.0;
+double JelloMesh::g_penaltyKd = 5.0;
 
 JelloMesh::JelloMesh() :     
-    m_integrationType(JelloMesh::RK4), m_drawflags(MESH | STRUCTURAL),
+    m_integrationType(JelloMesh::RK4), m_drawflags(MESH | SHEAR),
     m_cols(0), m_rows(0), m_stacks(0), m_width(0.0), m_height(0.0), m_depth(0.0)
 {
     SetSize(1.0, 1.0, 1.0);
-    SetGridSize(6, 6, 6);
+    SetGridSize(6,6,6);
 }
 
 JelloMesh::~JelloMesh()
@@ -517,7 +517,7 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 
 
     }
-	cout << "Computingforces..." << endl;
+	//cout << "Computingforces..." << endl;
 }
 
 void JelloMesh::ResolveContacts(ParticleGrid& grid)
@@ -527,11 +527,12 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
        const Intersection& contact = m_vcontacts[i];
        Particle& p = GetParticle(grid, contact.m_p);
        vec3 normal = contact.m_normal; 
-	  
+	   
 	   p.position = p.position + contact.m_distance*normal;
 	   p.velocity = p.velocity - ((2 * p.velocity)*normal)*normal;
-        // TODO
-	   cout << "resolving contacts..." << endl;
+	   p.force += -(p.force*normal)*normal;
+	   // TODO
+	   //cout << "resolving contacts..." << endl;
 
     }
 	
@@ -560,7 +561,7 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
 
         // TODO
 	}
-	cout << "resolving collisions..." << endl;
+	//cout << "resolving collisions..." << endl;
 }
 
 bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
@@ -576,7 +577,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 		intersection.m_normal = vec3(0, 1, 0);
 		intersection.m_distance = CollisionThreshold - p.position[1];
 		intersection.m_type = COLLISION;
-		cout << "Collision" << endl;
+		//cout << "Collision" << endl;
 		return true;
 	}
 	else if (p.position[1] < 0)
@@ -585,7 +586,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 		intersection.m_normal = vec3(0, 1, 0);
 		intersection.m_distance = -p.position[1];
 		intersection.m_type = CONTACT;
-		cout << "Contact" << endl;
+		//cout << "Contact" << endl;
 		return true;
 	}
 	else {
@@ -612,7 +613,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 
     // TODO
 
-	if ((cylinderAxis*dist_p_cylS)*(cylinderAxis*dist_p_cylE) < 0)
+	/*if ((cylinderAxis*dist_p_cylS)*(cylinderAxis*dist_p_cylE) < 0)
 	{
 		if((((dist_p_cylS)*cylinderAxis_normal)*cylinderAxis_normal+(dist_cyls_p)).Length()<cylinderRadius)
 		{
@@ -639,7 +640,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 			return false;
 		}
 		
-	}
+	}*/
 	
 
 
@@ -648,13 +649,13 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 
 
 
-	/*if (p.position[1] < CylinderCollisionThreshold && p.position[1]>cylinderRadius)
+	if (p.position[1] < CylinderCollisionThreshold && p.position[1]>cylinderRadius)
 	{
 		result.m_p = p.index;
 		result.m_normal = vec3(0, 1, 0);
 		result.m_distance = CylinderCollisionThreshold - p.position[1];
 		result.m_type = COLLISION;
-		cout << "Collision Cylinder" << endl;
+		//cout << "Collision Cylinder" << endl;
 		return true;
 	}
 	else if (p.position[1] < cylinderRadius)
@@ -663,15 +664,15 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 		result.m_normal = vec3(0, 1, 0);
 		result.m_distance = -p.position[1];
 		result.m_type = CONTACT;
-		cout << "Contact Cylinder" << endl;
+		//cout << "Contact Cylinder" << endl;
 		return true;
 	}
 	else {
 		return false;
 	}
 	return false;
-*/
-	return false;
+
+	//return false;
 }
 void JelloMesh::EulerIntegrate(double dt)
 {
@@ -690,7 +691,7 @@ void JelloMesh::EulerIntegrate(double dt)
 				s.position = s.position + s.velocity*dt; // position= initial position+ velocity*time
 				s.velocity = s.velocity + ((s.force)*(1 / s.mass)*dt);// velocity= initial velocity+ acceleration*time
 				//t.force = dt*t.force / t.mass;
-				cout << "Euler Executing..." << endl;
+			//cout << "Euler Executing..." << endl;
 			}
 		}
 	}
@@ -736,7 +737,7 @@ void JelloMesh::MidPointIntegrate(double dt)
 			}
 		}
 	}
-	cout << "Midpoint Executing..." << endl;
+	//cout << "Midpoint Executing..." << endl;
 
 
 }
@@ -853,7 +854,7 @@ void JelloMesh::RK4Integrate(double dt)
 
                 p.position = p.position + asixth * k1.velocity + 
                     athird * k2.velocity + athird * k3.velocity + asixth * k4.velocity;
-				cout << "RK4 Executing..." << endl;
+				//cout << "RK4 Executing..." << endl;
             }
         }
     }
