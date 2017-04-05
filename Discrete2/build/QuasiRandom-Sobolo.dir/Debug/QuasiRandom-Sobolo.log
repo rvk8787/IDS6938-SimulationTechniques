@@ -1,0 +1,14 @@
+﻿  Building Custom Rule C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/build/CMakeFiles/generate.stamp is up-to-date.
+  quasi.cpp
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\quasi.cpp(64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  sobol.cpp
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\sobol.cpp(13811): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\sobol.cpp(14027): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\sobol.cpp(14032): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\sobol.cpp(28060): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\sobol.cpp(28276): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\sobol.cpp(28685): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
+  Generating Code...
+  QuasiRandom-Sobolo.vcxproj -> C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\build\Debug\QuasiRandom-Sobolo.exe

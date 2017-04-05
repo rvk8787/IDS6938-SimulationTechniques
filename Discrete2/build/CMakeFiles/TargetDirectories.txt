@@ -1,0 +1,5 @@
+C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/build/CMakeFiles/Random.dir
+C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/build/CMakeFiles/QuasiRandom-Sobolo.dir
+C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/build/CMakeFiles/DiceRoll.dir
+C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/RaviKiran/Desktop/Git/IDS6938-SimulationTechniques/Discrete2/build/CMakeFiles/ZERO_CHECK.dir

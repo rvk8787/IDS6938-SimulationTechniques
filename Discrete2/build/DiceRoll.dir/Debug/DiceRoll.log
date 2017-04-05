@@ -1,0 +1,3 @@
+﻿  dice.cpp
+C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\dice.cpp(50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  DiceRoll.vcxproj -> C:\Users\RaviKiran\Desktop\Git\IDS6938-SimulationTechniques\Discrete2\build\Debug\DiceRoll.exe

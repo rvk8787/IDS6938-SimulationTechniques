@@ -613,6 +613,7 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 
     // TODO
 
+<<<<<<< HEAD
 	/*if ((cylinderAxis*dist_p_cylS)*(cylinderAxis*dist_p_cylE) < 0)
 	{
 		if((((dist_p_cylS)*cylinderAxis_normal)*cylinderAxis_normal+(dist_cyls_p)).Length()<cylinderRadius)
@@ -641,6 +642,9 @@ bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
 		}
 		
 	}*/
+=======
+	
+>>>>>>> 8bac36049c9a06388f376c15f2785da813d1ab78
 	
 
 
