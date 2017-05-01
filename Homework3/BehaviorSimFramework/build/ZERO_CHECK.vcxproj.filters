@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Ravikiran\Desktop\New folder\IDS6938-SimulationTechniques-master (1)\IDS6938-SimulationTechniques-master\Homework3\BehaviorSimFramework\build\CMakeFiles\7c87dac0183e8d21acd84d72febcf0f8\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{1B9FDDD0-9952-391A-A135-A87EF33A8AE9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
