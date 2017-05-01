@@ -151,36 +151,80 @@ The goal of this part of the assigment is to simulate the pedestrain flow for va
 
 **(b) - 20 points**: Create a maze. Generate the pdm, stats, and animations like before. Vary [parameters in your agents](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Attributes.html) to give them different behaviors and show the pedistrians change how they navigate the maze.
 
-** created a simple maze from an image file.
-  * constructed walls by tracing wall feature along the maze 
-  * created a pedestrian source and sink
-  * created pedestrian target lines for enabling pedestrians to follow a path to the end of the maze
+** Created a simple maze from an image file.
+  * Constructed walls by tracing wall feature along the maze 
+  * Created a pedestrian source and sink
+  * Created pedestrian target lines for enabling pedestrians to follow a path to the end of the maze
   * Images below show maze in 2D, maze in 3D, pedestrian density map, and entry and exit traffic and intensity statistics
   * Also attached is a video of the anylogic simulation.
   
-  ![](anylogic/maze.jpg?raw=true)
+  ![](images/maze.jpg?raw=true)
   
-  ![](anylogic/Captures/Maze.PNG?raw=true)
-  
-  ![](anylogic/Captures/Maze_Simulation.mp4?raw=true)
+  ![](images/Maze_Sim.PNG?raw=true)
+ 	
+	** Link to maze Simulation: 
+	
+	https://youtu.be/1hE_FtMlJVc
   
  Anylogic source code, model and simulation included in the "anylogic" folder.
 
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
-** created the Library Level 5 model from an image of floor plan obtained from UCF Library.
-  * constructed walls by tracing wall feature along Library 
-  * created a pedestrian source at 4 points and exit at 4 points
+** Created the Library Level 5 model from an image of floor plan obtained from UCF Library.
+ 
+ ![](images/Library.PNG?raw=true)
+ 
+  * Constructed walls by tracing wall feature along Library 
+  
+   
+ ![](images/Sketch.PNG?raw=true)
+  
+  * Created a pedestrian source at 4 points and exit at 4 points
+ 
+ In the figure below: 
+ * inflow500 is the ped source at "500" stairway with an arrival rate of 100.
+ 
+ * inflow501: is the ped source at "580" stairway with an arrival rate of 50.
+ 
+ * inflow502: is the ped source at Elevator 1  with an arrival rate of 100.
+ 
+ * inflow503: is the ped source at Elevator 3  with an arrival rate of 50.
+ 
+![](images/ped_Flow.PNG?raw=true)
+![](images/ped_Flow_2.PNG?raw=true)
     * Entrances: Elevator 1, 3, "500" Stairway, & "580" Stairway
     * Exits : Elevator 2, 4, 5, "570" Stairway. 
     * Pedestrians take different pathe from entry to exit.
     * pedestrians wait in archives, cataloguing area and conference room.
-    * pedestrians wait for service in the Library admin with 3 service lines to get service. 
-  * created pedestrian target lines for enabling pedestrian statistics 
-  * Images below show maze in 2D, maze in 3D, pedestrian density map, and entry and exit traffic and intensity statistics
+    * pedestrians wait for service in the Library admin with 3 service lines to get service.
+    
+  * Created pedestrian target lines for enabling pedestrian statistics
+  
+  * Placed 6 cameras at different locations near the entrances and exits of the library to monitor pedestrian behavior
+  
+   
+![](images/cameras.PNG?raw=true)
+ 
+  
+  * Images below show Library Level 5 in 2D and in 3D, pedestrian density map, and entry and exit traffic and intensity statistics
   * Also attached is a video of the anylogic simulation.
 
+ 
+![](images/Library_Day.PNG?raw=true)
+ 
+ * Pedestrian Statistics showing pedestrian traffic and intensity across the entrances and exits
+ * Pedestrian traffic at 5 different locations in the library: 1. Hallway, 2. Archive, 3. Conference Room, 4. Library Admin, 5. Cataloguing
+ 
+![](images/Ped_stats.PNG?raw=true)
+ 
+ This information might be particularly useful to train library staff for expected busy/ quiet hours and further simulate different conditions for estimating pedestrian traffic during peak hours.
+ 
+ 
+ 
+ 
+** Link to Library Simulation: 
+
+https://youtu.be/ePatpT_Heng
 
 
- ![](anylogic/Captures/Library_Level5_Simulation.mp4?raw=true)
-
+Anylogic source code, model and simulation included in the "anylogic" folder.
